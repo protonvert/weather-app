@@ -7,6 +7,12 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+
+  devServer: {
+
+    static: './dist'
+
+  },
   module: {
     rules: [
       {
@@ -18,6 +24,13 @@ const config = {
         test: /\.less$/,
         use: [
           'style-loader',
+          'css-loader',
+          'less-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
           'css-loader',
           'less-loader'
         ]

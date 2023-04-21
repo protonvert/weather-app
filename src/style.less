@@ -1,3 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto+Slab:wght@300&display=swap');
+
 :root {
-    background-color: black;
+    --primary-color: #F3DEBA;
+    --secondary-color: #A9907E;
+    --tertiary-color: #675D50;
+    --highlight-color: #ABC4AA;
+
+    --blackish-color: #232323;
+
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 48px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(19, 19, 19);
+}
+
+.page-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather-card {
+    box-sizing: border-box;
+    background-color: var(--blackish-color);
+    width: 750px;
+    height: 365px;
+    border-radius: 35px;
+    box-shadow: 42px 42px 14px -4px rgba(0, 0, 0, 0.288);
+    padding: 1rem 6rem 2rem; 
+
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+
+    .weather-card__current {
+        color: var(--secondary-color)
+    }
+    
+
+    .weather-card__week {
+        display: flex;
+        justify-content: space-between;
+        // gap: 25px;
+        font-size: 30px;
+        font-family: 'Roboto Slab', serif;
+
+        .weekday {
+            color: var(--secondary-color)
+        }
+
+        .weekday_temp {
+            color: var(--tertiary-color)
+        }
+
+        .weather-card__weekday {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    h1 {
+        // margin-top: 1rem;
+        justify-self: center;
+    }
 }

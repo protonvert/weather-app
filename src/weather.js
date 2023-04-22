@@ -23,7 +23,8 @@ export default class Weather {
     const weatherObj = await fetch(this.weatherLink)
     const weatherData = await weatherObj.json()
 
-    this.currentTemp = weatherData.current.feelslike_f
+    console.log(weatherData.current)
+    this.currentTemp = weatherData.current.temp_f
     const forecastDays = weatherData.forecast.forecastday
 
     forecastDays.forEach(day => {

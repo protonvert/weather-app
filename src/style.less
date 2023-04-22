@@ -5,9 +5,7 @@
     --secondary-color: #A9907E;
     --tertiary-color: #675D50;
     --highlight-color: #ABC4AA;
-
     --blackish-color: #232323;
-
 }
 
 h1 {
@@ -36,6 +34,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+.search-container {
+    margin-bottom: 1rem;
+
+    input {
+        background-color: var(--blackish-color);
+        outline: none;
+        border: none;
+        min-height: 1.5rem;
+        color: var(--primary-color);
+    }
 }
 
 .weather-card {
@@ -45,13 +56,25 @@ body {
     height: 365px;
     border-radius: 35px;
     box-shadow: 42px 42px 14px -4px rgba(0, 0, 0, 0.288);
-    padding: 1rem 6rem 2rem; 
+    padding: 2rem 4rem; 
 
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr 3fr 1fr;
 
     .weather-card__current {
-        color: var(--secondary-color)
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        color: var(--secondary-color);
+
+        h2:first-of-type + h2 {
+            font-weight: 100;
+            color: var(--tertiary-color)
+        }
+        
     }
     
 
@@ -59,7 +82,7 @@ body {
         display: flex;
         justify-content: space-between;
         // gap: 25px;
-        font-size: 30px;
+        font-size: 26px;
         font-family: 'Roboto Slab', serif;
 
         .weekday {
@@ -73,6 +96,7 @@ body {
         .weather-card__weekday {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
     }
 
